@@ -1,66 +1,80 @@
 @import url('reset.css');
 @import url('colores.css');
 
-:root{
+:root {
     --alturaHeader: 240px;
-
 }
 
-
-
-header{
+header {
     position: relative;
     height: var(--alturaHeader);
-    background-color: blue;
+    background-color: rgb(111, 111, 243);
 }
 
-main{
-    min-height: calc(100dvh - var(--alturaHeader));
-    background-color: rgb(211, 28, 28);
-}
-
-.categorias{height: 80px;
-    background-color: greenyellow;}
-
-.salones{
-    min-height: 300px;
-    background-color: rosybrown;
-}
-
-.buscador{
+.buscador {
     display: flex;
     position: absolute;
-    bottom:-30px;
-    right: 10%;
+    bottom: -30px;
+    left: 10%;
     height: 60px;
     width: 80%;
-    background-color: rgb(252, 254, 255);
+    background-color: rgb(158, 142, 52);
+ 
+input[type="text"] {
+        flex:1;
+        height: 100%;
+        padding: 0 20px;
+    }
+    i {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        background-color: rgb(255, 255, 255);
+    }
 
- i{
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background-color: rgb(174, 186, 196);
-}
-button{
-     width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background-color: rgb(174, 186, 196);
-}
-input[type="text"]{
-    flex: 1;
-    height: 100%;
-    padding: 0 20px;
-
-}
+    button {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        background-color: rgb(255, 255, 255);
+    }
 }
 
-
-.textoBienvenida{
+.textoBienvenida {
     position: absolute;
-    bottom:50px;
+    bottom: 50px;
+    width: 90%;
     left: 5%;
-}    
+}
+
+main {
+    min-height: calc(100dvh - var(--alturaHeader));
+}
+
+.categorias {
+    height: 120px;
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: auto hidden;
+}
+.item-cate{
+    flex: 0 0 80px;
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px gray;
+    padding: 6px;
+}
+.resto {
+    min-height: 300px;
+    background-color: rgb(209, 15, 226);
+}
